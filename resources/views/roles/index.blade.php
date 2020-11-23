@@ -125,7 +125,7 @@
 @endsection
 
 @section('modals')
-    <modal-window name="confirm_revoke_permission" class="modal_formbuilder"
+    <content-window name="confirm_revoke_permission" class="modal_formbuilder"
                   title="{{ _p('permission::pages.roles.confirm_revoke', 'Confirm revoke') }}">
         <form-builder :edited="true" url="{{ route('admin.permissions.revoke') }}"
                       @sended="AWEMA.emit('content::roles_table:update')"
@@ -134,9 +134,9 @@
             <fb-input name="role_id" type="hidden"></fb-input>
             <fb-input name="permission_id" type="hidden"></fb-input>
         </form-builder>
-    </modal-window>
+    </content-window>
 
-    <modal-window name="create" class="modal_formbuilder"
+    <content-window name="create" class="modal_formbuilder"
                   title="{{ _p('permission::pages.roles.create_roles', 'Create roles') }}">
         <form-builder url="{{ route('admin.roles.store') }}" @sended="AWEMA.emit('content::roles_table:update');AWEMA.emit('content::users_table:update')">
             <div class="grid">
@@ -146,9 +146,9 @@
                 </div>
             </div>
         </form-builder>
-    </modal-window>
+    </content-window>
 
-    <modal-window name="confirm_revoke_role" class="modal_formbuilder"
+    <content-window name="confirm_revoke_role" class="modal_formbuilder"
                   title="{{ _p('permission::pages.roles.confirm_revoke', 'Confirm revoke') }}">
         <form-builder :edited="true" url="{{ route('admin.roles.revoke') }}"
                       @sended="AWEMA.emit('content::roles_table:update');AWEMA.emit('content::users_table:update')"
@@ -157,5 +157,5 @@
             <fb-input name="email" label="{{ _p('permission::pages.roles.email', 'Email') }}"></fb-input>
             <fb-input name="role_id" type="hidden"></fb-input>
         </form-builder>
-    </modal-window>
+    </content-window>
 @endsection
