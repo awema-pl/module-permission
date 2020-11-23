@@ -1,0 +1,69 @@
+{
+    "name": "awema-pl/module-permission",
+    "description": ":description",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karol Golec",
+            "email": "karolgolec10@gmail.com",
+            "homepage": "https://github.pl/awema-pl/module-permission",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "karolgolec10@gmail.com"
+    },
+    "homepage": "https://github.com/awema-pl/module-permission",
+    "keywords": [
+        "Laravel",
+        "Permission"
+    ],
+    "require": {
+        "awema-pl/module-auth": "dev-master",
+        "awema-pl/module-indigo-layout": "dev-master",
+        "spatie/laravel-permission": "^3.17",
+        "illuminate/support": "~5|~6|~7|~8|~9"
+    },
+    "autoload": {
+        "psr-4": {
+            "AwemaPL\\Permission\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AwemaPL\\Permission\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always --configuration phpunit.xml.dist --debug"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AwemaPL\\Permission\\PermissionServiceProvider"
+            ],
+            "aliases": {
+                "Permission": "AwemaPL\\Permission\\Facades\\Permission"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Auth",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../Indigo-layout",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

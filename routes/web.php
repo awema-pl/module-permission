@@ -1,0 +1,2 @@
+<?php
+Permission::routes();
