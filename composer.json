@@ -1,6 +1,6 @@
 {
     "name": "awema-pl/module-permission",
-    "description": ":description",
+    "description": "Module permission.",
     "type": "library",
     "license": "MIT",
     "authors": [
