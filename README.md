@@ -143,3 +143,4 @@ GNU General Public License v3.0. Please see the [license file](license.md) for m
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/awema-pl
 [link-contributors]: ../../contributors]
+ 
