@@ -43,7 +43,7 @@
 @endsection
 
 @section('modals')
-    <content-window name="create" class="modal_formbuilder" title="{{ _p('permission::pages.permissions.create_permissions', 'Create permissions') }}">
+    <modal-window name="create" class="modal_formbuilder" title="{{ _p('permission::pages.permissions.create_permissions', 'Create permissions') }}">
         <form-builder url="{{ route('admin.permissions.store') }}" @sended="AWEMA.emit('content::permissions_table:update')">
             <div class="grid">
                 <div class="cell">
@@ -51,5 +51,5 @@
                 </div>
             </div>
         </form-builder>
-    </content-window>
+    </modal-window>
 @endsection
